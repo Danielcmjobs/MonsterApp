@@ -1,95 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loadingFragment">
+    app:startDestination="@id/pokemonListFragment">
 
-    <!-- Pantalla de carga -->
     <fragment
-        android:id="@+id/loadingFragment"
-        android:name="com.example.monsterapp.ui.fragments.LoadingFragment"
-        android:label="Loading">
+        android:id="@+id/pokemonListFragment"
+        android:name="com.example.monsterapp.ui.list.PokemonListFragment"
+        android:label="@string/nav_pokedex"
+        tools:layout="@layout/fragment_pokemon_list">
         <action
-            android:id="@+id/action_loading_to_map"
-            app:destination="@id/mapFragment"
-            app:popUpTo="@id/loadingFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
-    <!-- Mapa -->
-    <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.example.monsterapp.ui.fragments.MapFragment"
-        android:label="Mapa">
-        <action
-            android:id="@+id/action_map_to_detail"
-            app:destination="@id/pokemonDetailFragment" />
-        <action
-            android:id="@+id/action_map_to_favorites"
-            app:destination="@id/favoritesFragment" />
-    </fragment>
-
-    <!-- Detalle -->
     <fragment
         android:id="@+id/pokemonDetailFragment"
-        android:name="com.example.monsterapp.ui.fragments.DetailsFragment"
-        android:label="Detalle">
+        android:name="com.example.monsterapp.ui.detail.PokemonDetailFragment"
+        android:label="@string/pokemon_details"
+        tools:layout="@layout/fragment_pokemon_detail">
         <argument
             android:name="pokemonId"
-            app:argType="integer"
-            android:defaultValue="0" />
-        <action
-            android:id="@+id/action_detail_to_favorites"
-            app:destination="@id/favoritesFragment" />
-        <action
-            android:id="@+id/action_detail_to_map"
-            app:destination="@id/mapFragment" />
-        <action
-            android:id="@+id/action_detail_to_battle"
-            app:destination="@id/battleFragment" />
+            app:argType="integer" />
     </fragment>
 
-    <!-- [MEJORA] Combate -->
-    <fragment
-        android:id="@+id/battleFragment"
-        android:name="com.example.monsterapp.ui.fragments.BattleFragment"
-        android:label="Combate">
-        <argument
-            android:name="playerPokemonId"
-            app:argType="integer"
-            android:defaultValue="1" />
-        <argument
-            android:name="playerLevel"
-            app:argType="integer"
-            android:defaultValue="50" />
-        <argument
-            android:name="playerName"
-            app:argType="string"
-            android:defaultValue="Pokemon" />
-        <argument
-            android:name="opponentPokemonId"
-            app:argType="integer"
-            android:defaultValue="1" />
-        <argument
-            android:name="opponentLevel"
-            app:argType="integer"
-            android:defaultValue="50" />
-        <argument
-            android:name="opponentName"
-            app:argType="string"
-            android:defaultValue="Pokemon Rival" />
-    </fragment>
-
-    <!-- Favoritos -->
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.monsterapp.ui.fragments.FavoritesFragment"
-        android:label="Favoritos">
+        android:name="com.example.monsterapp.ui.favorites.FavoritesFragment"
+        android:label="@string/nav_favorites"
+        tools:layout="@layout/fragment_favorites">
         <action
             android:id="@+id/action_favorites_to_detail"
-            app:destination="@id/pokemonDetailFragment" />
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
-</navigation>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.monsterapp.ui.map.MapFragment"
+        android:label="@string/nav_map"
+        tools:layout="@layout/fragment_map" />
 
+</navigation>

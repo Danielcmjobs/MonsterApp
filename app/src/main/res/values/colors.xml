@@ -1,37 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="pokemon_red">#E53935</color>
-    <color name="pokemon_red_dark">#B71C1C</color>
-    <color name="pokemon_blue">#1976D2</color>
-    <color name="pokemon_yellow">#FDD835</color>
-    <color name="pokemon_grass">#4CAF50</color>
-    <color name="loading_background">#E53935</color>
-    <color name="map_background">#E8F5E9</color>
-    <color name="details_background">#FAFAFA</color>
-    <color name="favorites_background">#F5F5F5</color>
-    <color name="card_background">#FFFFFF</color>
+    <color name="colorPrimary">#E53935</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorPrimaryVariant">#C62828</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#FFCA28</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorSurface">#FFFFFF</color>
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
-    <color name="divider">#BDBDBD</color>
-    <color name="type_normal">#A8A878</color>
-    <color name="type_fire">#F08030</color>
-    <color name="type_water">#6890F0</color>
-    <color name="type_electric">#F8D030</color>
-    <color name="type_grass">#78C850</color>
-    <color name="type_ice">#98D8D8</color>
-    <color name="type_fighting">#C03028</color>
-    <color name="type_poison">#A040A0</color>
-    <color name="type_ground">#E0C068</color>
-    <color name="type_flying">#A890F0</color>
-    <color name="type_psychic">#F85888</color>
-    <color name="type_bug">#A8B820</color>
-    <color name="type_rock">#B8A038</color>
-    <color name="type_ghost">#705898</color>
-    <color name="type_dragon">#7038F8</color>
-    <color name="type_dark">#705848</color>
-    <color name="type_steel">#B8B8D0</color>
-    <color name="type_fairy">#EE99AC</color>
-</resources>
 
+    <!-- Pokémon stat colors -->
+    <color name="stat_hp">#FF5959</color>
+    <color name="stat_attack">#F5AC78</color>
+    <color name="stat_defense">#FAE078</color>
+    <color name="stat_sp_attack">#9DB7F5</color>
+    <color name="stat_sp_defense">#A7DB8D</color>
+    <color name="stat_speed">#FA92B2</color>
+</resources>

@@ -1,43 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MonsterApp</string>
-    <string name="app_name_display">MonsterApp</string>
-    <string name="app_logo_description">Logo de la aplicacion</string>
-    <string name="tagline">Atrapalos a todos!</string>
-    <string name="loading_text">Cargando…</string>
-    <string name="map_description">Mapa de exploracion</string>
-    <string name="user_location_description">Tu ubicacion</string>
-    <string name="explore_title">Explorar</string>
-    <string name="nearby_pokemon">Pokemon cercanos</string>
-    <string name="go_to_favorites">Ir a favoritos</string>
-    <string name="my_location">Mi ubicacion</string>
-    <string name="pokemon_image_description">Imagen del Pokemon</string>
-    <string name="pokemon_number_placeholder">#000</string>
-    <string name="pokemon_name_placeholder">Pokemon</string>
-    <string name="type_placeholder">Tipo</string>
-    <string name="stats_title">Estadisticas</string>
-    <string name="capture_button">Capturar!</string>
-    <string name="back_to_map_button">Volver al Mapa</string>
-    <string name="stat_hp">HP</string>
-    <string name="stat_attack">ATK</string>
-    <string name="stat_defense">DEF</string>
-    <string name="stat_speed">VEL</string>
-    <string name="pokedex_title">Pokedex</string>
-    <string name="pokedex_icon_description">Icono de la Pokedex</string>
-    <string name="captured_count_placeholder">0 Pokemon capturados</string>
-    <string name="back_button_description">Volver</string>
-    <string name="empty_pokedex_description">Pokedex vacia</string>
-    <string name="empty_pokedex_title">Tu Pokedex esta vacia!</string>
-    <string name="empty_pokedex_message">Explora el mapa y captura Pokemon para llenar tu Pokedex</string>
-    <string name="pokemon_captured_description">Pokemon capturado</string>
-    <string name="level_format">Nv. %1$d</string>
-    <!-- [MEJORA] Búsqueda en Pokédex -->
-    <string name="search_pokemon_hint">Buscar Pokémon...</string>
-    <string name="no_results_found">No se encontró ningún Pokémon</string>
-    <string name="captured_count_format">%1$d Pokémon capturados</string>
-    <!-- [MEJORA] Estadísticas Totales -->
-    <string name="average_level_format">Nivel Promedio: %1$.1f</string>
-    <string name="highest_level_format">Nivel Más Alto: %1$d</string>
-    <string name="stats_header_title">Estadísticas</string>
-</resources>
 
+    <!-- Navigation -->
+    <string name="nav_pokedex">Pokédex</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_map">Map</string>
+
+    <!-- Detail screen -->
+    <string name="pokemon_details">Pokémon Details</string>
+    <string name="pokemon_artwork">Pokémon artwork</string>
+    <string name="pokemon_image">Pokémon image</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="base_exp">Base Exp</string>
+    <string name="base_stats">Base Stats</string>
+    <string name="abilities">Abilities</string>
+    <string name="toggle_favorite">Toggle favorite</string>
+    <string name="height_value">%.1f m</string>
+    <string name="weight_value">%.1f kg</string>
+
+    <!-- Favorites screen -->
+    <string name="no_favorites">No favorites yet!\nTap the ♥ button on any Pokémon.</string>
+
+    <!-- Map screen -->
+    <string name="location_permission_required">Location permission is required to show your position on the map.\nPlease grant it in the app settings.</string>
+    <string name="trainer_location">Your trainer location</string>
+
+    <!-- General -->
+    <string name="retry">Retry</string>
+    <string name="loading">Loading…</string>
+</resources>

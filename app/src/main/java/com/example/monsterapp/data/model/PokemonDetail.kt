@@ -1,96 +1,59 @@
 package com.example.monsterapp.data.model
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
-/**
- * Modelo completo de un Pokémon con todos sus detalles.
- * Se obtiene desde el endpoint: https://pokeapi.co/api/v2/pokemon/{id}
- */
+@JsonClass(generateAdapter = true)
 data class PokemonDetail(
-    @Json(name = "id")
-    val id: Int,
-
-    @Json(name = "name")
-    val name: String,
-
-    @Json(name = "height")
-    val height: Int,  // Altura en decímetros
-
-    @Json(name = "weight")
-    val weight: Int,  // Peso en hectogramos
-
-    @Json(name = "types")
-    val types: List<PokemonTypeSlot>,
-
-    @Json(name = "stats")
-    val stats: List<PokemonStat>,
-
-    @Json(name = "sprites")
-    val sprites: PokemonSprites
+    @Json(name = "id") val id: Int,
+    @Json(name = "name") val name: String,
+    @Json(name = "height") val height: Int,
+    @Json(name = "weight") val weight: Int,
+    @Json(name = "base_experience") val baseExperience: Int?,
+    @Json(name = "sprites") val sprites: Sprites,
+    @Json(name = "types") val types: List<TypeSlot>,
+    @Json(name = "stats") val stats: List<StatSlot>,
+    @Json(name = "abilities") val abilities: List<AbilitySlot>
 )
 
-/**
- * Slot de tipo de Pokémon (un Pokémon puede tener 1 o 2 tipos)
- */
-data class PokemonTypeSlot(
-    @Json(name = "slot")
-    val slot: Int,
-
-    @Json(name = "type")
-    val type: PokemonType
+@JsonClass(generateAdapter = true)
+data class Sprites(
+    @Json(name = "front_default") val frontDefault: String?,
+    @Json(name = "other") val other: OtherSprites?
 )
 
-/**
- * Información del tipo
- */
-data class PokemonType(
-    @Json(name = "name")
-    val name: String  // Ejemplo: "grass", "poison"
-)
-
-/**
- * Estadística individual del Pokémon
- */
-data class PokemonStat(
-    @Json(name = "base_stat")
-    val baseStat: Int,
-
-    @Json(name = "stat")
-    val stat: Stat
-)
-
-/**
- * Nombre de la estadística
- */
-data class Stat(
-    @Json(name = "name")
-    val name: String  // Ejemplo: "hp", "attack", "defense"
-)
-
-/**
- * Sprites (imágenes) del Pokémon
- */
-data class PokemonSprites(
-    @Json(name = "front_default")
-    val frontDefault: String?,
-
-    @Json(name = "other")
-    val other: OtherSprites?
-)
-
-/**
- * Sprites alternativos de mejor calidad
- */
+@JsonClass(generateAdapter = true)
 data class OtherSprites(
-    @Json(name = "official-artwork")
-    val officialArtwork: OfficialArtwork?
+    @Json(name = "official-artwork") val officialArtwork: OfficialArtwork?
 )
 
-/**
- * Artwork oficial (imagen de alta calidad)
- */
+@JsonClass(generateAdapter = true)
 data class OfficialArtwork(
-    @Json(name = "front_default")
-    val frontDefault: String?
+    @Json(name = "front_default") val frontDefault: String?
 )
 
+@JsonClass(generateAdapter = true)
+data class TypeSlot(
+    @Json(name = "slot") val slot: Int,
+    @Json(name = "type") val type: NamedResource
+)
+
+@JsonClass(generateAdapter = true)
+data class StatSlot(
+    @Json(name = "base_stat") val baseStat: Int,
+    @Json(name = "effort") val effort: Int,
+    @Json(name = "stat") val stat: NamedResource
+)
+
+@JsonClass(generateAdapter = true)
+data class AbilitySlot(
+    @Json(name = "is_hidden") val isHidden: Boolean,
+    @Json(name = "slot") val slot: Int,
+    @Json(name = "ability") val ability: NamedResource
+)
+
+@JsonClass(generateAdapter = true)
+data class NamedResource(
+    @Json(name = "name") val name: String,
+    @Json(name = "url") val url: String
+)
