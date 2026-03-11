@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E53935</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorPrimaryVariant">#C62828</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#FFCA28</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Pokémon stat colors -->
+    <color name="stat_hp">#FF5959</color>
+    <color name="stat_attack">#F5AC78</color>
+    <color name="stat_defense">#FAE078</color>
+    <color name="stat_sp_attack">#9DB7F5</color>
+    <color name="stat_sp_defense">#A7DB8D</color>
+    <color name="stat_speed">#FA92B2</color>
+</resources>
