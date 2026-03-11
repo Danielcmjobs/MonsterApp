@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/card_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Imagen del Pokémon -->
+        <ImageView
+            android:id="@+id/imgPokemon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/pokemon_image_description"
+            android:src="@drawable/ic_pokemon_placeholder"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_pokemon_image" />
+
+        <!-- Contenedor de información -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <!-- Número del Pokémon -->
+            <TextView
+                android:id="@+id/tvPokemonNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="#001 · Hace 5 min" />
+
+            <!-- Nombre del Pokémon -->
+            <TextView
+                android:id="@+id/tvPokemonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Bulbasaur" />
+
+            <!-- Chip de tipo/nivel -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipType1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/type_grass"
+                app:chipMinHeight="24dp"
+                tools:text="Nv. 15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

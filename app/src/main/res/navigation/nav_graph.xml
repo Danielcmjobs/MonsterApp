@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+
+    <!-- Pantalla de carga -->
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.monsterapp.ui.fragments.LoadingFragment"
+        android:label="Loading">
+        <action
+            android:id="@+id/action_loading_to_map"
+            app:destination="@id/mapFragment"
+            app:popUpTo="@id/loadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Mapa -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.monsterapp.ui.fragments.MapFragment"
+        android:label="Mapa">
+        <action
+            android:id="@+id/action_map_to_detail"
+            app:destination="@id/pokemonDetailFragment" />
+        <action
+            android:id="@+id/action_map_to_favorites"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <!-- Detalle -->
+    <fragment
+        android:id="@+id/pokemonDetailFragment"
+        android:name="com.example.monsterapp.ui.fragments.DetailsFragment"
+        android:label="Detalle">
+        <argument
+            android:name="pokemonId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_detail_to_favorites"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_detail_to_map"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_detail_to_battle"
+            app:destination="@id/battleFragment" />
+    </fragment>
+
+    <!-- [MEJORA] Combate -->
+    <fragment
+        android:id="@+id/battleFragment"
+        android:name="com.example.monsterapp.ui.fragments.BattleFragment"
+        android:label="Combate">
+        <argument
+            android:name="playerPokemonId"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="playerLevel"
+            app:argType="integer"
+            android:defaultValue="50" />
+        <argument
+            android:name="playerName"
+            app:argType="string"
+            android:defaultValue="Pokemon" />
+        <argument
+            android:name="opponentPokemonId"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="opponentLevel"
+            app:argType="integer"
+            android:defaultValue="50" />
+        <argument
+            android:name="opponentName"
+            app:argType="string"
+            android:defaultValue="Pokemon Rival" />
+    </fragment>
+
+    <!-- Favoritos -->
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.monsterapp.ui.fragments.FavoritesFragment"
+        android:label="Favoritos">
+        <action
+            android:id="@+id/action_favorites_to_detail"
+            app:destination="@id/pokemonDetailFragment" />
+    </fragment>
+
+</navigation>
+

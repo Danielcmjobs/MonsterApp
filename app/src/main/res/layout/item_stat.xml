@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout para mostrar una estadística del Pokémon -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Nombre de la estadística (HP, ATK, DEF, etc.) -->
+    <TextView
+        android:id="@+id/tvStatName"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="HP" />
+
+    <!-- Valor numérico de la estadística -->
+    <TextView
+        android:id="@+id/tvStatValue"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvStatName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="45" />
+
+    <!-- Barra de progreso visual de la estadística -->
+    <ProgressBar
+        android:id="@+id/progressStat"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="8dp"
+        android:max="255"
+        android:progress="45"
+        android:progressDrawable="@drawable/progress_stat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvStatValue"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="45" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
