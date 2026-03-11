@@ -14,6 +14,12 @@
   <img src="https://img.shields.io/badge/API-PokeAPI-red?style=for-the-badge"/>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/Danielcmjobs/MonsterApp?style=flat-square" alt="Último commit"/>
+  <img src="https://img.shields.io/github/repo-size/Danielcmjobs/MonsterApp?style=flat-square" alt="Tamaño del repositorio"/>
+  <img src="https://img.shields.io/github/v/tag/Danielcmjobs/MonsterApp?sort=semver&style=flat-square" alt="Tag estable"/>
+</p>
+
 ---
 
 ## 📋 Descripción
@@ -313,12 +319,12 @@ DañoFinal = DañoBase × Efectividad × Crítico
 - Android Studio Hedgehog o superior
 - JDK 17+
 - Android SDK 24+ (minSdk)
-- Android SDK 34 (targetSdk)
+- Android SDK 36 (targetSdk)
 
 ### Pasos
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/MonsterApp.git
+  git clone https://github.com/Danielcmjobs/MonsterApp.git
    ```
 
 2. Abre el proyecto en Android Studio
